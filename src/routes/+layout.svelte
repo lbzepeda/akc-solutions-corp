@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import '$lib/i18n';
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
@@ -7,6 +8,9 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
 
-{@render children?.()}
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+	{@render children?.()}
+</div>

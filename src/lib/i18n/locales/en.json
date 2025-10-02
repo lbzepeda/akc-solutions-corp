@@ -1,0 +1,74 @@
+{
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "AKC Solutions Corp - Air Conditioning Specialists Miami",
+        "description": "Professional air conditioning services in Miami. Installation, repair and maintenance with 10 years of experience. Available 24/7."
+      },
+      "hero": {
+        "header": "01 — PROFESSIONAL HVAC",
+        "heroTitle": "Air Conditioning Specialists that Care for your Home and Power your Business",
+        "innovation": "Your satisfaction is our priority",
+        "subtitle": "Professional HVAC services in Miami with full warranty",
+        "description": "Over 10 years of experience providing reliable and efficient air conditioning solutions",
+        "residential": {
+          "title": "Residential",
+          "description": "Climate solutions for your home"
+        },
+        "commercial": {
+          "title": "Commercial",
+          "description": "HVAC solutions for businesses"
+        },
+        "industrial": {
+          "title": "Industrial", 
+          "description": "Professional industrial climate control"
+        },
+        "maintenance": {
+          "title": "Maintenance",
+          "description": "Specialized preventive services"
+        },
+        "status": "SERVICE",
+        "available": "AVAILABLE 24/7",
+        "productsTitle": "Freshness and Comfort Guaranteed for your Family and Business",
+        "actions": "SERVICES",
+        "cta": "View Services"
+      },
+      "brand": {
+        "header": "02 — WHY CHOOSE US?",
+        "title": "10 Years of HVAC Experience",
+        "description": "AKC Solutions brings over a decade of experience from Nicaragua to the North American market. We specialize in providing quality, reliable and energy-efficient air conditioning solutions for Miami and surrounding areas."
+      },
+      "faq": {
+        "header": "05 — FREQUENTLY ASKED QUESTIONS",
+        "title": "Answers to your HVAC Questions",
+        "subtitle": "Everything you need to know about our services",
+        "contactWhatsApp": "Contact via WhatsApp",
+        "items": [
+          {
+            "question": "Do you cover the entire Miami area?",
+            "answer": "Yes, we provide service in Miami, Homestead, Florida City, Coral Gables, Hialeah and Opa-locka with installation, maintenance and repair of air conditioners."
+          },
+          {
+            "question": "How long does installation take?",
+            "answer": "Residential air conditioning installation takes 2-4 hours. For commercial and industrial projects, we coordinate according to specific needs."
+          },
+          {
+            "question": "Do you have technical service available?",
+            "answer": "We have specialized technicians available 24/7 with parts for all brands we handle."
+          },
+          {
+            "question": "Do you offer energy consulting?",
+            "answer": "Yes, we help optimize air conditioning usage to improve comfort and reduce energy consumption."
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hello, I'm interested in getting more information about your air conditioning services.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  }
+}

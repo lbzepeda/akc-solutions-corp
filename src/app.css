@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Swiss Design System Components */
+@layer components {
+	/* Swiss Button Primary */
+	.swiss-btn-primary {
+		@apply bg-blue-600 text-white font-medium border border-blue-600 
+			   transition-colors hover:bg-blue-700 hover:border-blue-700
+			   dark:bg-blue-500 dark:border-blue-500 dark:hover:bg-blue-600;
+	}
+
+	/* Swiss Card */
+	.swiss-card {
+		@apply bg-white border border-gray-200 transition-all
+			   dark:bg-gray-900 dark:border-gray-700;
+	}
+
+	/* Swiss Typography Classes */
+	.text-headline {
+		@apply text-5xl font-semibold text-gray-900 dark:text-white leading-tight;
+	}
+	
+	.text-title {
+		@apply text-2xl font-medium text-gray-900 dark:text-white leading-tight;
+	}
+	
+	.text-body {
+		@apply text-base text-gray-700 dark:text-gray-300 leading-relaxed;
+	}
+	
+	.text-small {
+		@apply text-sm text-gray-600 dark:text-gray-400 leading-normal;
+	}
+	
+	.text-caption {
+		@apply text-xs uppercase tracking-wider text-gray-500 dark:text-gray-500 font-medium;
+	}
+
+	/* Accent Colors for AKC */
+	.accent {
+		@apply text-blue-600 dark:text-blue-400;
+	}
+}
+
+/* Dark mode toggle support */
+.dark-mode-toggle {
+	@apply fixed top-4 right-4 z-50 p-2 rounded-full bg-gray-200 dark:bg-gray-800 
+		   text-gray-800 dark:text-gray-200 transition-colors hover:bg-gray-300 dark:hover:bg-gray-700;
+}

@@ -1,0 +1,74 @@
+{
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "AKC Solutions Corp - Especialistas en Aire Acondicionado Miami",
+        "description": "Servicios profesionales de aire acondicionado en Miami. Instalación, reparación y mantenimiento con 10 años de experiencia. Disponible 24/7."
+      },
+      "hero": {
+        "header": "01 — CLIMATIZACIÓN PROFESIONAL",
+        "heroTitle": "Especialistas en Aire Acondicionado que Cuidan tu Hogar y Potencian tu Empresa",
+        "innovation": "Su satisfacción es nuestra prioridad",
+        "subtitle": "Servicios profesionales de climatización en Miami con garantía completa",
+        "description": "Más de 10 años de experiencia brindando soluciones de aire acondicionado confiables y eficientes",
+        "residential": {
+          "title": "Residencial",
+          "description": "Sistemas de climatización para tu hogar"
+        },
+        "commercial": {
+          "title": "Comercial", 
+          "description": "Soluciones HVAC para empresas"
+        },
+        "industrial": {
+          "title": "Industrial",
+          "description": "Climatización industrial profesional"
+        },
+        "maintenance": {
+          "title": "Mantenimiento",
+          "description": "Servicios preventivos especializados"
+        },
+        "status": "SERVICIO",
+        "available": "DISPONIBLE 24/7",
+        "productsTitle": "Frescura y Confort Garantizados para tu Familia y tu Negocio",
+        "actions": "SERVICIOS",
+        "cta": "Ver Servicios"
+      },
+      "brand": {
+        "header": "02 — ¿POR QUÉ ELEGIRNOS?",
+        "title": "10 Años de Experiencia en Climatización",
+        "description": "AKC Solutions trae más de una década de experiencia desde Nicaragua al mercado norteamericano. Nos especializamos en brindar soluciones de aire acondicionado de calidad, confiables y eficientes en energía para Miami y sus alrededores."
+      },
+      "faq": {
+        "header": "05 — PREGUNTAS FRECUENTES",
+        "title": "Respuestas a tus Dudas sobre Climatización",
+        "subtitle": "Todo lo que necesitas saber sobre nuestros servicios",
+        "contactWhatsApp": "Contactar por WhatsApp",
+        "items": [
+          {
+            "question": "¿Cubren toda el área de Miami?",
+            "answer": "Sí, brindamos servicio en Miami, Homestead, Florida City, Coral Gables, Hialeah y Opa-locka con instalación, mantenimiento y reparación de aires acondicionados."
+          },
+          {
+            "question": "¿Cuánto tiempo toma la instalación?",
+            "answer": "La instalación de aires acondicionados residenciales toma entre 2-4 horas. Para proyectos comerciales e industriales, coordinamos según las necesidades específicas."
+          },
+          {
+            "question": "¿Tienen servicio técnico disponible?",
+            "answer": "Contamos con técnicos especializados disponibles 24/7 con repuestos para todas las marcas que manejamos."
+          },
+          {
+            "question": "¿Ofrecen asesoría energética?",
+            "answer": "Sí, ayudamos a optimizar el uso de aire acondicionado para mejorar el confort y reducir el consumo energético."
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hola, me interesa obtener más información sobre sus servicios de aire acondicionado.",
+    "phone": "Teléfono",
+    "email": "Email",
+    "address": "Dirección"
+  }
+}
