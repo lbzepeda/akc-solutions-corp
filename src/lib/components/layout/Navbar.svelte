@@ -3,6 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { Menu, X } from 'lucide-svelte';
 	import { onMount } from 'svelte';
+	import ThemeToggle from '../ui/ThemeToggle.svelte';
 
 	let isMenuOpen = false;
 	let scrolled = false;
@@ -151,8 +152,9 @@
 				{/each}
 			</div>
 
-			<!-- Right Side - Contact Actions -->
+			<!-- Right Side - Theme Toggle + Contact Actions -->
 			<div class="hidden items-center space-x-4 md:flex">
+				<ThemeToggle />
 				<a
 					href="https://wa.me/17869402775?text={whatsappMessage}"
 					target="_blank"
@@ -175,7 +177,8 @@
 			</div>
 
 			<!-- Mobile Menu Button -->
-			<div class="flex items-center md:hidden">
+			<div class="flex items-center space-x-2 md:hidden">
+				<ThemeToggle />
 				<button
 					type="button"
 					class="p-2 text-gray-600 transition-colors duration-150 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400"

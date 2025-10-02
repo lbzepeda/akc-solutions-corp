@@ -115,7 +115,7 @@
 					<!-- Background Image -->
 					<img
 						src={category.image}
-						alt={heroData[category.titleKey].title}
+						alt={heroData[category.titleKey]?.title || category.id}
 						class="absolute inset-0 h-full w-full object-cover"
 						loading={index === 0 ? 'eager' : 'lazy'}
 					/>
@@ -126,9 +126,9 @@
 					>
 						<div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
 							<div>
-								<div class="text-title mb-2">{heroData[category.titleKey].title}</div>
+								<div class="text-title mb-2">{heroData[category.titleKey]?.title || category.id}</div>
 								<div class="text-small mb-3 leading-snug text-white/90">
-									{heroData[category.titleKey].description}
+									{heroData[category.titleKey]?.description || ''}
 								</div>
 								<div class="flex items-end justify-between">
 									<div class="text-small">

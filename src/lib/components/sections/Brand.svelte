@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logoWhite from '$lib/assets/logos/logo-white-bg.webp';
+	import logoDark from '$lib/assets/logos/logo-dark-bg.webp';
 
 	// Accept data props for customization
 	let { data = null }: { data?: any } = $props();
@@ -32,23 +33,31 @@
 	];
 </script>
 
-<section id="nosotros" class="bg-white py-16">
+<section id="nosotros" class="bg-white py-16 dark:bg-gray-900">
 	<div class="mx-auto max-w-6xl px-8">
 		<!-- Swiss Typography Layout -->
 		<div class="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
 			<div>
-				<div class="text-caption mb-4 text-gray-600">{brandData.header}</div>
-				<h2 class="mb-6 text-4xl font-bold leading-tight text-black">
-					{brandData.title}
+				<div class="text-caption mb-4 text-gray-600 dark:text-gray-400">{brandData.header || '02 — ¿POR QUÉ ELEGIRNOS?'}</div>
+				<h2 class="mb-6 text-4xl font-bold leading-tight text-black dark:text-white">
+					{brandData.title || '10 Años de Experiencia en Climatización'}
 				</h2>
-				<p class="mb-8 leading-relaxed text-gray-600">
-					{brandData.description}
+				<p class="mb-8 leading-relaxed text-gray-600 dark:text-gray-300">
+					{brandData.description || 'AKC Solutions trae más de una década de experiencia desde Nicaragua al mercado norteamericano.'}
 				</p>
 				<div class="flex justify-center lg:justify-start">
+					<!-- Logo for light mode -->
 					<img
 						src={logoWhite}
 						alt="AKC Solutions Corp Logo"
-						class="h-16 object-contain"
+						class="h-16 object-contain dark:hidden"
+						loading="lazy"
+					/>
+					<!-- Logo for dark mode -->
+					<img
+						src={logoDark}
+						alt="AKC Solutions Corp Logo"
+						class="hidden h-16 object-contain dark:block"
 						loading="lazy"
 					/>
 				</div>
@@ -56,9 +65,9 @@
 
 			<div class="space-y-4">
 				{#each benefits as benefit}
-					<div class="border border-gray-200 bg-gray-50 p-6 transition-all hover:shadow-sm">
-						<h3 class="text-title mb-2 text-gray-900">{benefit.title}</h3>
-						<p class="text-small text-gray-600">{benefit.description}</p>
+					<div class="border border-gray-200 bg-gray-50 p-6 transition-all hover:shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-750">
+						<h3 class="text-title mb-2 text-gray-900 dark:text-white">{benefit.title}</h3>
+						<p class="text-small text-gray-600 dark:text-gray-300">{benefit.description}</p>
 					</div>
 				{/each}
 			</div>
