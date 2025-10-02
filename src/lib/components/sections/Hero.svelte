@@ -87,8 +87,9 @@
 <!-- Preload critical images -->
 <svelte:head>
 	<link rel="preload" as="image" href={residentialPreview} />
+	<link rel="preload" as="image" href={commercialPreview} />
 	<link rel="preload" as="image" href={industrialPreview} />
-	<link rel="preload" as="image" href={fanPreview} />
+	<link rel="preload" as="image" href={maintenancePreview} />
 </svelte:head>
 
 <section id="home" class="min-h-screen bg-gray-50 pb-20 pt-12 dark:bg-black">
@@ -109,7 +110,7 @@
 			{#each serviceCategories as category, index}
 				<a
 					href="#servicios"
-					class="swiss-card group relative block aspect-[4/3] overflow-hidden transition-colors hover:border-blue-600 dark:hover:border-blue-400"
+					class="swiss-card group relative block aspect-[4/3] overflow-hidden transition-colors hover:border-primary-600"
 				>
 					<!-- Background Image -->
 					<img
@@ -134,7 +135,7 @@
 										<div class="mb-1 text-white/60">{heroData.status}</div>
 										<div class="font-medium">{heroData.available}</div>
 									</div>
-									<div class="text-small group-hover:text-blue-400 transition-colors">→</div>
+									<div class="text-small group-hover:text-primary-600 transition-colors">→</div>
 								</div>
 							</div>
 						</div>
@@ -167,10 +168,10 @@
 							{heroData.cta}
 						</a>
 						<a
-							href="https://wa.me/17869402775?text=${whatsappMessage}"
+							href="https://wa.me/17869402775?text={whatsappMessage}"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex items-center justify-center gap-2 border border-green-700 px-5 py-2 text-sm font-medium text-green-700 transition-colors hover:bg-green-700 hover:text-white dark:border-green-400 dark:text-green-400 dark:hover:bg-green-400 dark:hover:text-black"
+							class="flex items-center justify-center gap-2 border border-green-700 px-5 py-2 text-sm font-medium text-green-700 transition-colors hover:bg-green-700 hover:text-white"
 						>
 							<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
 								<path

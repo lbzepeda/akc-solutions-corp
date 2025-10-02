@@ -7,17 +7,38 @@
 	// Accept data props for customization
 	let { data = null, sectionNumber = '05' }: { data?: any; sectionNumber?: string } = $props();
 
-	// Use provided data or fallback to i18n keys with safe translation
-	let faqData = $derived({
-		header: data?.header || safeTranslateWithFallback('faq.header', '05 — FAQ'),
-		title: data?.title || safeTranslateWithFallback('faq.title', 'Preguntas Frecuentes'),
-		subtitle: data?.subtitle || safeTranslateWithFallback('faq.subtitle', 'Las respuestas que necesitas'),
-		items: (data?.items && data.items.length > 0) ? data.items : (($json && $json('faq.items')) || []),
-		contactWhatsApp: data?.contactWhatsApp || safeTranslateWithFallback('faq.contactWhatsApp', 'Contactar WhatsApp')
+	// Use provided data or fallback to default AKC data
+	let faqData = $derived(data || {
+		header: '05 — PREGUNTAS FRECUENTES',
+		title: 'Respuestas a tus Dudas sobre Climatización',
+		subtitle: 'Todo lo que necesitas saber sobre nuestros servicios',
+		contactWhatsApp: 'Contactar por WhatsApp',
+		items: [
+			{
+				question: '¿Cubren toda el área de Miami?',
+				answer: 'Sí, brindamos servicio en Miami, Homestead, Florida City, Coral Gables, Hialeah y Opa-locka con instalación, mantenimiento y reparación de aires acondicionados.',
+				hasContactButton: false
+			},
+			{
+				question: '¿Cuánto tiempo toma la instalación?',
+				answer: 'La instalación de aires acondicionados residenciales toma entre 2-4 horas. Para proyectos comerciales e industriales, coordinamos según las necesidades específicas.',
+				hasContactButton: false
+			},
+			{
+				question: '¿Tienen servicio técnico disponible?',
+				answer: 'Contamos con técnicos especializados disponibles 24/7 con repuestos para todas las marcas que manejamos.',
+				hasContactButton: true
+			},
+			{
+				question: '¿Ofrecen asesoría energética?',
+				answer: 'Sí, ayudamos a optimizar el uso de aire acondicionado para mejorar el confort y reducir el consumo energético.',
+				hasContactButton: false
+			}
+		]
 	});
 
-	// Reactive WhatsApp message based on current language with safe translation
-	const whatsappMessage = $derived(encodeURIComponent(safeTranslateWithFallback('contact.whatsappMessage', 'Hola, me interesa obtener más información sobre sus servicios de climatización.')));
+	// WhatsApp message
+	const whatsappMessage = $derived(encodeURIComponent('Hola, me interesa obtener más información sobre sus servicios de aire acondicionado.'));
 
 	let openIndex = $state(-1);
 

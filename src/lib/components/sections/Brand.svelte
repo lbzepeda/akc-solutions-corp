@@ -1,78 +1,65 @@
 <script lang="ts">
-	import comfortStarLogo from '$lib/assets/brands/comfort_star_logo.webp';
-	import rheemLogo from '$lib/assets/brands/rheem/rheem_logo.webp';
-	import tempblueLogo from '$lib/assets/brands/tempblue_logo.webp';
-	import { _, locale } from 'svelte-i18n';
-	import { safeTranslateWithFallback } from '$lib/utils/i18n-safe';
-	import { page } from '$app/stores';
-	import { createContextAwareUrl } from '$lib/utils/navigation';
+	import logoWhite from '$lib/assets/logos/logo-white-bg.webp';
 
 	// Accept data props for customization
 	let { data = null }: { data?: any } = $props();
 
-	// Use provided data or fallback to i18n keys with safe translation
+	// Use provided data or fallback to default AKC data
 	let brandData = $derived(data || {
-		header: safeTranslateWithFallback('brands.header', 'MARCAS'),
-		title: safeTranslateWithFallback('brands.title', 'Nuestras Marcas'),
-		description: safeTranslateWithFallback('brands.description', 'Representamos las marcas más reconocidas en climatización a nivel mundial.')
+		header: '02 — ¿POR QUÉ ELEGIRNOS?',
+		title: '10 Años de Experiencia en Climatización',
+		description: 'AKC Solutions trae más de una década de experiencia desde Nicaragua al mercado norteamericano. Nos especializamos en brindar soluciones de aire acondicionado de calidad, confiables y eficientes en energía para Miami y sus alrededores.'
 	});
 
-	const additionalBrands = [
+	// AKC Values/Benefits
+	const benefits = [
 		{
-			name: 'Tempblue',
-			logo: tempblueLogo,
-			url: 'tempblue'
+			title: 'Experiencia Comprobada',
+			description: '10 años de experiencia en el mercado nicaragüense'
 		},
 		{
-			name: 'Rheem',
-			logo: rheemLogo,
-			url: 'rheem'
+			title: 'Disponibilidad 24/7',
+			description: 'Servicio disponible las 24 horas del día, todos los días'
 		},
 		{
-			name: 'Comfort Star',
-			logo: comfortStarLogo,
-			url: 'comfort-star'
+			title: 'Técnicos Especializados',
+			description: 'Equipo de profesionales certificados'
+		},
+		{
+			title: 'Precios Competitivos',
+			description: 'Precios transparentes y justos'
 		}
 	];
-
-	// Create context-aware URLs using the helper function
-	const createUrl = (path: string) => createContextAwareUrl($page, path);
 </script>
 
-<section id="marcas" class="bg-white dark:bg-gray-800 py-16">
+<section id="nosotros" class="bg-white py-16">
 	<div class="mx-auto max-w-6xl px-8">
 		<!-- Swiss Typography Layout -->
 		<div class="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
 			<div>
-				<div class="text-caption mb-4 text-gray-600 dark:text-gray-400">{brandData.header}</div>
-				<h2 class="mb-6 text-4xl font-bold leading-tight text-black dark:text-white">
-					{@html brandData.title}
+				<div class="text-caption mb-4 text-gray-600">{brandData.header}</div>
+				<h2 class="mb-6 text-4xl font-bold leading-tight text-black">
+					{brandData.title}
 				</h2>
-				<p class="mb-8 leading-relaxed text-gray-600 dark:text-gray-300">
+				<p class="mb-8 leading-relaxed text-gray-600">
 					{brandData.description}
 				</p>
+				<div class="flex justify-center lg:justify-start">
+					<img
+						src={logoWhite}
+						alt="AKC Solutions Corp Logo"
+						class="h-16 object-contain"
+						loading="lazy"
+					/>
+				</div>
 			</div>
 
-			<div class="space-y-2">
-				{#each additionalBrands as brand}
-					<a
-						href={createUrl(brand.url)}
-						class="group block border border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-900 p-5 transition-all duration-200 hover:shadow-sm dark:hover:shadow-gray-700/20"
-					>
-						<div class="flex h-10 items-center justify-between">
-							<div class="flex flex-1 items-center justify-center">
-								<img
-									src={brand.logo}
-									alt={brand.name}
-									width="112"
-									height="28"
-									class="h-7 object-contain transition-opacity group-hover:opacity-90 dark:brightness-0 dark:invert"
-									loading="lazy"
-								/>
-							</div>
-							<div class="text-sm text-gray-600 dark:text-gray-400 transition-colors group-hover:text-black dark:group-hover:text-white">→</div>
-						</div>
-					</a>
+			<div class="space-y-4">
+				{#each benefits as benefit}
+					<div class="border border-gray-200 bg-gray-50 p-6 transition-all hover:shadow-sm">
+						<h3 class="text-title mb-2 text-gray-900">{benefit.title}</h3>
+						<p class="text-small text-gray-600">{benefit.description}</p>
+					</div>
 				{/each}
 			</div>
 		</div>
