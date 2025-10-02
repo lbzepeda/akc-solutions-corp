@@ -4,7 +4,7 @@
 			AKC Solutions Corp
 		</h1>
 		<p class="text-xl text-gray-600 mb-8">
-			Modern web solutions built with cutting-edge technology
+			Modern web solutions built with cutting-edge technology - Test deployment 🚀
 		</p>
 		<div class="flex flex-wrap justify-center gap-4">
 			<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
